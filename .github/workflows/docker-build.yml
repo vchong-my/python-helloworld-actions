@@ -33,6 +33,8 @@ jobs:
         uses: docker/login-action@v1 
         with:
           # Added secrets in repo per https://docs.github.com/en/actions/reference/encrypted-secrets
+          # Fixed DOCKERHUB_TOKEN after base64 decoding of ~/.docker/config.json
+          # per https://stackoverflow.com/questions/43441454/docker-login-auth-token
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -

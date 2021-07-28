@@ -36,6 +36,7 @@ jobs:
           # Fixed DOCKERHUB_TOKEN after base64 decoding of ~/.docker/config.json
           # per https://stackoverflow.com/questions/43441454/docker-login-auth-token
           # Fixed DOCKERHUB_TOKEN - removed token len (":38") at the end of the decoded string
+          # Deleted and generated new token in dockerhub
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
